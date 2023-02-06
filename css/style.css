@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --yellow: #FCF02D;
+    --white: #FFFFFF;
+}
+
+.container-fluid {
+    max-width: 1250px;
+}
+
+body {
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+.nav-flex {
+    padding: 45px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    font-size: 19px;
+    color: #EEEEEE;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.ul-flex li {
+    opacity: 0.8;
+}
+
+.ul-flex li:hover {
+    opacity: 2;
+    cursor: pointer;
+    color: #EEEEEE;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--yellow);
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+.card-movie {
+    height: 544px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: var(--white);
+    font-size: 45px;
+    font-family: 'Candal', sans-serif;
+}
+
+.info {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    letter-spacing: 1px;
+}
+
+.padding-span {
+    padding: 0px 5px;
+}
+
+.paragraph {
+    color: var(--white);
+    font-size: 18px;
+    padding: 20px 0px;
+    line-height: 30px;
+    opacity: 0.8;
+}
+
+.btn-play {
+    background-color: var(--yellow);
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 26px;
+}
+
+.btn-new {
+    background-color: var(--white);
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 26px;
+}
+
+.btn-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.img-boy {
+    width: 420px;
+}
+
+.img-cnt {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
