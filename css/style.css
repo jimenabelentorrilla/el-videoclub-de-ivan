@@ -13,7 +13,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #313131 0%, #2e2e2e 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background: linear-gradient(to bottom, #1b1b1b 0%, #2e2e2e 40%, #1C1C1C 150%), linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0.25) 200%);
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,36 +29,25 @@ body {
     padding: 45px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 100px;
     align-items: center;
 }
 
 .ul-flex {
     display: flex;
     flex-direction: row;
-    gap: 45px;
+    gap: 60px;
     font-size: 19px;
-    color: #EEEEEE;
+    color: var(--white);
     font-weight: 500;
     text-decoration: none;
 }
 
-.ul-flex li {
-    opacity: 0.8;
-}
-
-.ul-flex li:hover {
-    opacity: 2;
-    cursor: pointer;
-    color: #EEEEEE;
-}
-
 .logo {
-    font-weight: 700;
     color: var(--yellow);
-    font-size: 25px;
+    font-size: 22px;
     font-family: 'Open Sans', sans-serif;
-    cursor: pointer;
 }
 
 .card-movie {
@@ -66,11 +55,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
 .title {
     color: var(--white);
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'Candal', sans-serif;
 }
 
@@ -88,37 +78,31 @@ body {
 
 .paragraph {
     color: var(--white);
-    font-size: 18px;
+    font-size: 19px;
     padding: 20px 0px;
-    line-height: 30px;
-    opacity: 0.8;
-}
-
-.btn-play {
-    background-color: var(--yellow);
-    color: black;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 26px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
 }
 
 .btn-new {
-    background-color: #c7c5c5;
-    color: black;
+    background-color: transparent;
+    color: #EEEEEE;
     padding: 15px 30px;
-    border: none;
+    border: solid 3px var(--white);
     border-radius: 26px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .btn-new:hover {
-    background-color: var(--white);
+    background-color: #EEEEEE;
+    color: #1b1b1b;
 }
 
 .btn-flex {
     display: flex;
     flex-direction: row;
     gap: 25px;
+    align-items: center;
 }
 
 .img-boy {
@@ -129,4 +113,27 @@ body {
     display: flex;
     justify-content: center;
     height: 500px;
+}
+
+.outer_circle {
+    stroke-width: 3;
+    stroke-dasharray: 410;
+    stroke-dashoffset: 0;
+    stroke-linecap: square;
+    transition: all .4s ease-out;
+}
+
+.glightbox_video:hover .outer_circle {
+    stroke-dashoffset: 410;
+    transition: stroke .7s .4s ease-out, stroke-dashoffset .4s ease-out
+}
+
+.glightbox_video:hover .inner-circle {
+    fill: var(--yellow);
+    transition: fill .4s .3s ease-out;
+}
+
+.glightbox_video:hover .play {
+    fill: white;
+    transition: fill .4s .3s ease-out;
 }

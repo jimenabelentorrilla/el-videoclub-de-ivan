@@ -22,30 +22,30 @@
             <div class="col-lg-12">
                 <nav>
                     <div class="nav-flex">
-                        <p id="foo" class="logo">EL VIDEOCLUB DE IVAN</p>
+                        <p class="logo">EL VIDEOCLUB DE IVAN</p>
                         <ul class="ul-flex">
                             <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Sarasa</a>
+                                <a id="foo" class="nav-link text-light" href="#">Inicio</a>
                             </li>
                             <li>
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                  Movies
+                                  Películas
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a id="" class="dropdown-item" href="#">The Lost Boys</a>
-                                    <a class="dropdown-item" href="#">Muriel’s Wedding</a>
-                                    <a class="dropdown-item" href="#">Tomboy</a>
-                                    <a class="dropdown-item" href="#">VFW</a>
-                                    <a class="dropdown-item" href="#">Dressed To Kill</a>
-                                    <a class="dropdown-item" href="#">True Romance</a>
-                                    <a class="dropdown-item" href="#">Los Paranoicos</a>
-                                    <a class="dropdown-item" href="#">Like Father Like Son</a>
-                                    <a class="dropdown-item" href="#">Tomboy</a>
-                                    <a class="dropdown-item" href="#">Under The Silver Lake</a>
+                                    <a id="" class="dropdown-item" href="#">Acción</a>
+                                    <a class="dropdown-item" href="#">Anime</a>
+                                    <a class="dropdown-item" href="#">Ciencia ficción y fantásticas</a>
+                                    <a class="dropdown-item" href="#">Clásicas</a>
+                                    <a class="dropdown-item" href="#">Comedias</a>
+                                    <a class="dropdown-item" href="#">Dramas</a>
+                                    <a class="dropdown-item" href="#">Independientes</a>
+                                    <a class="dropdown-item" href="#">Románticas</a>
+                                    <a class="dropdown-item" href="#">Terror</a>
+                                    <a class="dropdown-item" href="#">Thrillers</a>
                                 </div>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">My List</a>
+                                <a class="nav-link text-light" href="#">Mi Lista</a>
                             </li>
                         </ul>
                     </div>
@@ -56,19 +56,19 @@
         <div class="row">
             <div class="col-lg-6">
                 <div id="card-movie" class="card-movie">
-                    <h1 class="title" id="title">Shuffle de peliculas</h1>
+                    <h1 class="title" id="title">¿Qué peli miramos?</h1>
                     <div id="info" class="info">
 
                     </div>
                     <div>
-                        <p id="text" class="paragraph">¿No tenés idea que peli mirar? Hacé click y te doy una peli random, andá a hacer los pochoclos.</p>
+                        <p id="text" class="paragraph">¿Estás dando vueltas hace tres horas en el inicio de Netflix?<br> Hacé click y te tiro una peli random, andá a hacer los pochoclos.</p>
                     </div>
 
                     <div class="btn-flex">
-                        <div id="play"></div>
                         <div>
-                            <button id="btn-new" class="btn-new"><i class="fa-solid fa-film"></i> NEW MOVIE</button>
+                            <input type="button" class="btn-new" value="¡NUEVA PELI!" id="btn-new" onclick="cambiarboton()">
                         </div>
+                        <div id="play"></div>
                     </div>
                 </div>
             </div>
