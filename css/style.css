@@ -43,6 +43,10 @@ body {
     justify-content: flex-end;
 }
 
+.ul-flex li {
+    text-decoration: none;
+}
+
 .card-movie {
     display: flex;
     flex-direction: column;
