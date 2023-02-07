@@ -3,12 +3,14 @@ let imdb = document.getElementById("imdb");
 let duration = document.getElementById("duration");
 let year = document.getElementById("year");
 let play = document.getElementById("play");
-let newPeli = document.getElementById("new");
 let background = document.getElementsByTagName("body");
 let text = document.getElementById("text");
 let img = document.querySelector("img");
-let cardMovie = document.getElementById("card-movie");
 let p = document.getElementById("foo");
+let newPeli = document.getElementById('btn-new');
+let info = document.getElementById("info");
+
+
 
 
 
@@ -25,49 +27,23 @@ class Pelicula {
     }
 
     mostrar() {
-        //title.innerText = `${this.title}`;
-        //imdb.innerHTML = `<i style="color:#FCF02D" ; class="fa-regular fa-lg fa-star"></i> <span id="imdb" class="padding-span">IMDB: ${this.imdb}</span>`;
-        //duration.innerHTML = `<i style="color:#FCF02D" ; class="fa-regular fa-lg fa-clock"></i> <span id="duration" class="padding-span">DURATION: ${this.duration}</span>`;
-        //year.innerHTML = `<i style="color:#FCF02D" ; class="fa-regular fa-lg fa-calendar-days"></i> <span id="year" class="padding-span">YEAR: ${this.year}</span>`;
-        //play.innerHTML = `<div>
-        //<a href="${this.url}" target="_blank" style= "color:black;">
-        //    <button id="play" class="btn-play">
-        //        <i class="fa-sharp fa-solid fa-play"></i> PLAY
-        //    </button> 
-        //</a>
-        //</div>`;
-        cardMovie.innerHTML = `<div id="card-movie" class="card-movie">
-        <h1 class="title" id="title">${this.title}</h1>
-        <div class="info">
-            <div>
-            <i style="color:#FCF02D" ; class="fa-regular fa-lg fa-star"></i> <span id="imdb" class="padding-span">IMDB: ${this.imdb}</span>
-            </div>
-            <div>
-            <i style="color:#FCF02D" ; class="fa-regular fa-lg fa-clock"></i> <span id="duration" class="padding-span">DURATION: ${this.duration}</span>
-            </div>
-            <div>
-            <i style="color:#FCF02D" ; class="fa-regular fa-lg fa-calendar-days"></i> <span id="year" class="padding-span">YEAR: ${this.year}</span>
-            </div>
-        </div>
-        <div>
-            <p id="text" class="paragraph">${this.text}</p>
-        </div>
-
-        <div class="btn-flex">
-            <div>
-                <a href="${this.url}" target="_blank" style= "color:black;">
-                    <button id="play" class="btn-play">
-                        <i class="fa-sharp fa-solid fa-play"></i> PLAY
-                    </button> 
-                </a>
-            </div>
-            <div>
-                <button id="new2" class="btn-new"><i class="fa-solid fa-arrows-rotate"></i> ANOTHER MOVIE</button>
-            </div>
-        </div>
-    </div>`;
+        title.innerText = `${this.title}`;
+        info.innerHTML = `  <div>
+                                <i style="color:#FCF02D" ; class="fa-regular fa-lg fa-star"></i> <span id="imdb" class="padding-span">IMDB: ${this.imdb}</span>
+                            </div>
+                            <div>
+                                <i style="color:#FCF02D" ; class="fa-regular fa-lg fa-clock"></i> <span id="duration" class="padding-span">DURATION: ${this.duration}</span>
+                            </div>
+                            <div>
+                                <i style="color:#FCF02D" ; class="fa-regular fa-lg fa-calendar-days"></i> <span id="year" class="padding-span">YEAR: ${this.year}</span>
+                            </div>`
+        text.innerText = `${this.text}`
+        play.innerHTML = `<a href="${this.url}" target="_blank" style= "color:black;">
+                                                <button id="play" class="btn-play">
+                                                    <i class="fa-sharp fa-solid fa-play"></i> PLAY
+                                                </button> 
+                                            </a>`;
         document.body.style.backgroundImage = `${this.background}`;
-        //text.innerHTML = ` <p class="paragraph">${this.text}</p>`
     }
 }
 
@@ -83,16 +59,16 @@ const peliculas = [
     new Pelicula("Under The Silver Lake", "6", "2H 19M", "2018", "https://drive.google.com/file/d/1YxeeR8V8HPj4OGxv6Zc5oUygk9VSVzh6/view?usp=share_link", "url('/css/assets/UnderTheSilverLake.jpg')", "Sam, a disenchanted young man, finds a mysterious woman swimming in his apartment's pool one night. The next morning, she disappears. Sam sets off across LA to find her, and along the way he uncovers a conspiracy far more bizarre.")
 ];
 
+
 function clicked() {
     let randomIndex = Math.floor(Math.random() * peliculas.length);
     let randomMovie = peliculas[randomIndex];
     randomMovie.mostrar();
     img.removeAttribute('src');
 }
+newPeli.addEventListener("click", clicked);
 
 function recarga(evento) {
     location.reload();
 }
-
-newPeli.addEventListener("click", clicked);
 p.onclick = recarga;

@@ -13,7 +13,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background: linear-gradient(to bottom, #313131 0%, #2e2e2e 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,11 +103,16 @@ body {
 }
 
 .btn-new {
-    background-color: var(--white);
+    background-color: #c7c5c5;
     color: black;
     padding: 15px 30px;
     border: none;
     border-radius: 26px;
+    font-weight: 700;
+}
+
+.btn-new:hover {
+    background-color: var(--white);
 }
 
 .btn-flex {
