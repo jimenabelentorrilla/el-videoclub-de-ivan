@@ -8,10 +8,6 @@
     --white: #FFFFFF;
 }
 
-.container-fluid {
-    max-width: 1250px;
-}
-
 body {
     background: linear-gradient(to bottom, #1b1b1b 0%, #2e2e2e 40%, #1C1C1C 150%), linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0.25) 200%);
     background-blend-mode: multiply;
@@ -19,19 +15,21 @@ body {
     background-repeat: no-repeat;
 }
 
-.navbar {
-    position: absolute;
-    top: 50px;
-    z-index: 2;
+.container-fluid {
+    max-width: 1240px;
 }
 
-.nav-flex {
-    padding: 45px 0px;
+.row-flex {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 100px;
     align-items: center;
+    padding: 45px 0px;
+}
+
+.logo {
+    color: var(--yellow);
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .ul-flex {
@@ -42,26 +40,32 @@ body {
     color: var(--white);
     font-weight: 500;
     text-decoration: none;
-}
-
-.logo {
-    color: var(--yellow);
-    font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
+    justify-content: flex-end;
 }
 
 .card-movie {
-    height: 544px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    height: 544px;
+}
+
+.background {
+    background-color: #0000007a;
+    border-radius: 16px;
+    padding: 32px;
+    height: fit-content;
 }
 
 .title {
     color: var(--white);
-    font-size: 50px;
+    font-size: 48px;
     font-family: 'Candal', sans-serif;
+}
+
+.peli {
+    color: var(--yellow);
 }
 
 .info {
@@ -70,6 +74,7 @@ body {
     flex-direction: row;
     gap: 20px;
     letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .padding-span {
@@ -78,10 +83,11 @@ body {
 
 .paragraph {
     color: var(--white);
-    font-size: 19px;
-    padding: 20px 0px;
-    line-height: 35px;
-    letter-spacing: 0.5px;
+    font-size: 20px;
+    line-height: 39px;
+    letter-spacing: 1.2px;
+    opacity: 0.8;
+    font-weight: 400;
 }
 
 .btn-new {
@@ -105,15 +111,18 @@ body {
     align-items: center;
 }
 
-.img-boy {
-    width: 420px;
-}
-
-.img-cnt {
+.img-boy-flex {
     display: flex;
-    justify-content: center;
     height: 500px;
 }
+
+.img-boy {
+    width: 475px;
+    height: auto;
+}
+
+
+/*********botón play**********/
 
 .outer_circle {
     stroke-width: 3;
@@ -137,3 +146,6 @@ body {
     fill: white;
     transition: fill .4s .3s ease-out;
 }
+
+
+/***********************/
